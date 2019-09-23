@@ -4,12 +4,15 @@ button2.hide()
 let button3 = new Button('+ 2x', btnPress4);
 button3.hide()
 
-var title = new Title('Troll'); // Create a title element
+var title = new Title('Planet X42'); // Create a title element
 var button = new Button('+', btnPress);   // Create a button element
 var button1 = new Button('-', btnPress2);
-//var button = new Button('+ 2x',btnPress3);
-//button.hide()
+var button4 = new Button('Activate Heater', addToFeed);
 var scr = new Text(score);                    // Create a text element
+
+var feed = new HTMLElement('div', "");
+
+
 
 
 function btnPress() {
@@ -20,18 +23,18 @@ function btnPress() {
     if(score > 30) {
       button3.show();
   }
+ }
 }
-
 function btnPress2() {
   score--;
   scr.edit(score);
-  if(score > 20) {
+  if(score < -20) {
     button2.show();
     if(score > 30) {
       button3.show();
   }
+ }
 }
-
 function btnPress3() {
   score = 0;
   scr.edit(score);
@@ -39,4 +42,13 @@ function btnPress3() {
 }
 
 function btnPress4() {
-score++;
+score = score +2;
+scr.edit(score);
+}
+
+
+
+function addToFeed(text) {
+  let element = new Text('Heater Activated')
+  feed.edit(element)
+}
