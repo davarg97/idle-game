@@ -47,14 +47,14 @@ function addToFeed(text) {
   let element = new Text('Heater Activated')
  //feed.edit (element)
 
- var loop = setInterval(button4, 1000);
- button4.style('background-color','red');
+ //var loop = setInterval(button4, 1000);
+ //button4.style('background-color','red');
 
 }
 
-function addToFeed();{
-function stopLoop(){
-  clearInterval(loop);
-}
-button4.style('background-color','blue');
-}
+//function addToFeed();{
+//function stopLoop(){
+  //clearInterval(loop);
+//}
+//button4.style('background-color','blue');
+//}
