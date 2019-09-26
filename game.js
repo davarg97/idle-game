@@ -1,4 +1,4 @@
-//let score = 0; // Create a variable to store the score in
+let score = 0; // Create a variable to store the score in
 //let button2 = new Button('+ 2x', btnPress3);
 //button2.hide()
 //let button3 = new Button('+ 2x', btnPress4);
@@ -47,14 +47,11 @@ function addToFeed(text) {
   let element = new Text('Heater Activated')
  //feed.edit (element)
 
- //var loop = setInterval(button4, 1000);
- //button4.style('background-color','red');
+ var loop = setInterval(button4, 1000);
+ button4.style('background-color','red');
 
+function stopLoop(){
+  clearInterval(loop);
+  button4.style('background-color','blue');
 }
-
-//function addToFeed();{
-//function stopLoop(){
-  //clearInterval(loop);
-//}
-//button4.style('background-color','blue');
-//}
+}
