@@ -9,7 +9,11 @@ var title = new Title('Planet X42'); // Create a title element
 //var button1 = new Button('-', btnPress2);
 var button4 = new Button('Activate Heater', addToFeed);
 //var scr = new Text(score);                    // Create a text element
+var section = new Section();
+var text = new Text('');
 
+section.add(text);
+section.addBorder('red');
 //var feed = new HTMLElement('div', "");
 
 //function btnPress() {
@@ -45,13 +49,12 @@ var button4 = new Button('Activate Heater', addToFeed);
 
 function addToFeed(text) {
   let element = new Text('Heater Activated')
+  section.add(element);
  //feed.edit (element)
 
- var loop = setInterval(button4, 1000);
  button4.style('background-color','red');
-
-function stopLoop(){
-  clearInterval(loop);
-  button4.style('background-color','blue');
+ setTimeout(blue , 6000);
 }
+function blue() {
+  button4.style('background-color','blue');
 }
